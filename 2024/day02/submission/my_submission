@@ -1,0 +1,103 @@
+This is my submission of Day2
+
+Basic linux commands
+
+1.File and Directory Management
+
+ls - To list the documents present in the directory
+    ex: ls -la 
+pwd -To know presnet working directory
+cd - to navigate between diretories 
+    ex: cd home directory
+        cd .. 1 directory up
+        cd -  to go to previous directory
+        cd /home/guru/test   togo to desired directory
+rmdir - to delete a directory
+
+rm - to delete a document
+    ex: rm filename
+        rm -r directory
+
+
+cp - to copy files and folders
+    ex: cp file1 file2
+        cp path/file1 pathoffile2/
+        cp -r source/path dest/path
+
+mv - to move/rename a file/folder from one location to another
+    ex: mv file1 file2
+        mv path/file1 pathoffile2/
+        mv -r source/path dest/path
+
+zip/unzip - to compress a file and to extract a file
+    ex: zip testfile.zip testfile.txt    # here only 1 file is zipped
+        zip multiple.zip testfile1.txt testfile2.txt testfile3.txt  # here only 1 file is zipped
+
+        unzip multiple.zip
+
+tar - to bundle multiple files without compressing
+    ex: tar -cf newtarfile.tar testfile1.txt testfile2.txt testfile3.txt # here -c is for creating -f is for archive filename
+        tar -xf newtarfile.tar # here -x is for extract -f is for archive filename
+
+find - To find a file/directory
+    ex: find /home/ -name "testfile2.txt"
+        find /home/ -type d -name "3"
+        
+grep - To filter text from a file
+    ex: grep pattern /path/file.txt
+        grep pattern file1 file2 file3
+
+2. File Viewing and Editing
+
+touch - to create file
+    ex: touch abc.txt
+
+cat - to read the text inside a file. To write text into a file
+    ex: cat filename.txt  #this will display the content inside a file
+    ex: cat > filename.txt
+        Hello
+        How are you today?  #this will add the content inside a file # Press ctrl+D to save the file
+head - To display first few lines of a file
+    ex: head filename.txt
+
+tail - To display last few lines of a file
+    ex: tail filename.txt
+
+3. Process Management
+ps - display process running
+top - Display real-time system statistics and running processes.
+kill - to kill process by PID
+
+4. System monitoring
+
+df: Display disk space usage
+du: display disk usage of each file
+free : dosplay memory usage
+uptime: display how much time the system is up
+
+5. Networking
+
+ifconfig : to show network interfaces
+ip addr show :  to display detailed information about the network interfaces and their IP
+ping : check connectivity to a ip address
+wget : to download files from web
+curl: Transfer data from or to a server
+
+6 . Package Management
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install package_name
+sudo apt-get remove package_name
+
+7. User and Permission Management
+chmod: Change file permissions.
+    ex : chmod 644 public.txt  read =4 write =2 execute =1   Owner Group others
+chown: Change file owner and group.
+    ex: chown newuser myfile.txt #Assign a file to a new owner (user)
+        chown newuser:newgroup myfile.txt #Assign both a new user and group
+        chown :newgroup myfile.txt #To change the group while keeping the same owner
+        chown -R newuser:newgroup /path/to/directory #Apply ownership changes to a directory and all its contents
+usermod: Modify user accounts
+    ex: usermod -l newusername oldusername
+useradd, passwd, and userdel command
+passwd: Change user password.
