@@ -1,0 +1,64 @@
+This is my day3 submission
+
+# Day 3 Task: Basic Linux Commands with a Twist
+
+Task: What are the Linux commands to
+
+1. View the content of a file and display line numbers.
+ans:- cat -n filename.txt
+
+2. Change the access permissions of files to make them readable, writable, and executable by the owner only.
+ans:- chmod 700 filename
+
+3. Check the last 10 commands you have run.
+ans:- history | tail -n 10
+
+4. Remove a directory and all its contents.
+ans:- rm -r /home/guru/test/*
+
+5. Create a `fruits.txt` file, add content (one fruit per line), and display the content.
+ans: cat > fruits.txt   #to create file and write fruit per line
+        Apple
+        Orange
+        CTRL+D
+
+    cat fruits.txt  #to diplsay the contents inside the file
+
+6. Add content in `devops.txt` (one in each line) - Apple, Mango, Banana, Cherry, Kiwi, Orange, Guava. Then, append "Pineapple" to the end of the file.
+ans:- cat > devops.txt  #to create initial file
+        Apple
+        Orange
+        Banana
+        Cherry
+        Kiwi
+        CTRL+D
+      
+      cat >> devops.txt  #to append the file
+      Pineapple
+      CTRL+D
+7. Show the first three fruits from the file in reverse order.
+ans:- head -n 3 devops.txt | tac
+
+8. Show the bottom three fruits from the file, and then sort them alphabetically.
+ans:- head -n 3 devops.txt | sort
+
+9. Create another file `Colors.txt`, add content (one color per line), and display the content.
+ans:- cat > Colors.txt
+      gray
+      CTRL+D
+
+      cat Colors.txt
+
+10. Add content in `Colors.txt` (one in each line) - Red, Pink, White, Black, Blue, Orange, Purple, Grey. Then, prepend "Yellow" to the beginning of the file.
+ans:- echo -e "Yellow\n$(cat Colors.txt)" > Colors.txt
+11. Find and display the lines that are common between `fruits.txt` and `Colors.txt`.
+ans:- #First sort both files
+        sort fruits.txt -o fruits.txt
+        sort devops.txt -o devops.txt
+
+        comm -12 fruits.txt devops.txt
+
+12. Count the number of lines, words, and characters in both `fruits.txt` and `Colors.txt`.
+ans:- wc fruit.txt devops.txt
+
+Reference: [Linux Commands for DevOps Used Day-to-Day](https://www.linkedin.com/pulse/linux-commands-devops-used-day-to-day-activit-chetan-/)
