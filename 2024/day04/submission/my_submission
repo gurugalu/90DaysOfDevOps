@@ -1,0 +1,31 @@
+This is my day 4 sumission
+
+- Explain in your own words and with examples what Shell Scripting means for DevOps.
+ans:- Shell script comes as a great helper in DevOps. Since its native to Linux it can talk to Linux Shell layer. Shell scripts can be used to automate routine tasks,system admins. If nothing is there Shell is there.
+- What is `#!/bin/bash`? Can we write `#!/bin/sh` as well?
+ans:- #!/bin/bash is the path of shell interpreter. Yes we can write #!/bin/sh.
+- Write a Shell Script that prints `I will complete #90DaysOfDevOps challenge`.
+ans:- 
+#!/bin/bash
+echo "I will complete #90DaysOfDevOps challenge"
+- Write a Shell Script that takes user input, input from arguments, and prints the variables.
+ans:-
+#!/bin/bash
+echo "your full name is $1 $2."
+- Provide an example of an If-Else statement in Shell Scripting by comparing two numbers.
+ans:-
+#!/bin/bash
+echo "enter the first number"
+read first
+echo "enter the second number"
+read second
+if [ $first -gt $second ]
+then
+    echo "first number is bigger"
+elif [ $first -lt $second ]
+then
+    echo "second number is bigger"
+else
+    echo "numbers are same"
+fi
+

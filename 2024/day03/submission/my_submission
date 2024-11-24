@@ -60,5 +60,3 @@ ans:- #First sort both files
 
 12. Count the number of lines, words, and characters in both `fruits.txt` and `Colors.txt`.
 ans:- wc fruit.txt devops.txt
-
-Reference: [Linux Commands for DevOps Used Day-to-Day](https://www.linkedin.com/pulse/linux-commands-devops-used-day-to-day-activit-chetan-/)
